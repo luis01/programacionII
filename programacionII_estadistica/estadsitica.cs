@@ -8,11 +8,10 @@ namespace programacionII_estadistica
 {
     class estadsitica
     {
-        public double suma = 0;
-
         public double media(String[] serie)
         {
-            foreach(string valor in serie) {
+            double suma = 0;
+            foreach (string valor in serie) {
                 suma += int.Parse(valor);
             }
             return suma / serie.Length;
@@ -20,8 +19,7 @@ namespace programacionII_estadistica
         public double estandar(String[] serie)
         {
             double media_aritmetica = media(serie),
-                suma = 0,
-                estandar = 0;
+                suma = 0;
             foreach(string valor in serie) {
                 suma += Math.Pow(double.Parse(valor) - media_aritmetica, 2);
             }
