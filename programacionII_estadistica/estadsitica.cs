@@ -18,7 +18,7 @@ namespace programacionII_estadistica
         }
         public double estandar(String[] serie)
         {
-            double media_aritmetica = media(serie),
+            double media_aritmetica = media(serie), 
                 suma = 0;
             foreach(string valor in serie) {
                 suma += Math.Pow(double.Parse(valor) - media_aritmetica, 2);
