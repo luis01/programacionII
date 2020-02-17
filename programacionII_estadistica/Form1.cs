@@ -33,5 +33,28 @@ namespace programacionII_estadistica
         {
             lblrespuesta.Text = "Tipica=" + objEstadistica.tipica(txtserie.Text.Split(','));
         }
+
+        private void grdEstadistica_KeyUp(object sender, KeyEventArgs e)
+        {
+            try{
+                int nfilas = grdEstadistica.Rows.Count - 1,
+                    sumaf1 = 0;
+                DataGridViewRow fila;
+
+                for (int i = 0; i <= nfilas; i++)
+                {
+                    fila = grdEstadistica.Rows[i];
+                    int x1 = int.Parse(fila.Cells["x1"].Value.ToString()),
+                        f1 = int.Parse(fila.Cells["f1"].Value.ToString());
+                    sumaf1 += f1;
+
+                    fila.Cells["fi"].Value = sumaf1.ToString();
+                    fila.Cells["xixfi"].Value = (x1*f1).ToString();
+                    fila.Cells["x2ixfi"].Value = ( Math.Pow(x1,2) * f1).ToString();
+                }
+            }catch(Exception error) { 
+                ///
+            }
+        }
     }
 }
