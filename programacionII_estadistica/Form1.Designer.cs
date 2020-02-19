@@ -40,33 +40,37 @@
             this.fi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.x2ixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbltotalf1 = new System.Windows.Forms.Label();
+            this.lbltotalxixfi = new System.Windows.Forms.Label();
+            this.lbltotalx2ixfi = new System.Windows.Forms.Label();
+            this.lbltotales = new System.Windows.Forms.Label();
+            this.lblmedia = new System.Windows.Forms.Label();
+            this.lblestandar = new System.Windows.Forms.Label();
+            this.lbltipica = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstadistica)).BeginInit();
             this.SuspendLayout();
             // 
             // lblserie
             // 
             this.lblserie.AutoSize = true;
-            this.lblserie.Location = new System.Drawing.Point(32, 72);
-            this.lblserie.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lblserie.Location = new System.Drawing.Point(17, 22);
             this.lblserie.Name = "lblserie";
-            this.lblserie.Size = new System.Drawing.Size(107, 32);
+            this.lblserie.Size = new System.Drawing.Size(42, 13);
             this.lblserie.TabIndex = 0;
             this.lblserie.Text = "SERIE:";
             // 
             // txtserie
             // 
-            this.txtserie.Location = new System.Drawing.Point(160, 64);
-            this.txtserie.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtserie.Location = new System.Drawing.Point(65, 19);
             this.txtserie.Name = "txtserie";
-            this.txtserie.Size = new System.Drawing.Size(484, 38);
+            this.txtserie.Size = new System.Drawing.Size(184, 20);
             this.txtserie.TabIndex = 1;
             // 
             // btnMediaAritmetica
             // 
-            this.btnMediaAritmetica.Location = new System.Drawing.Point(59, 260);
-            this.btnMediaAritmetica.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnMediaAritmetica.Location = new System.Drawing.Point(255, 12);
             this.btnMediaAritmetica.Name = "btnMediaAritmetica";
-            this.btnMediaAritmetica.Size = new System.Drawing.Size(211, 76);
+            this.btnMediaAritmetica.Size = new System.Drawing.Size(79, 32);
             this.btnMediaAritmetica.TabIndex = 2;
             this.btnMediaAritmetica.Text = "Calcular X";
             this.btnMediaAritmetica.UseVisualStyleBackColor = true;
@@ -75,19 +79,17 @@
             // lblrespuesta
             // 
             this.lblrespuesta.AutoSize = true;
-            this.lblrespuesta.Location = new System.Drawing.Point(51, 179);
-            this.lblrespuesta.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lblrespuesta.Location = new System.Drawing.Point(23, 47);
             this.lblrespuesta.Name = "lblrespuesta";
-            this.lblrespuesta.Size = new System.Drawing.Size(34, 32);
+            this.lblrespuesta.Size = new System.Drawing.Size(14, 13);
             this.lblrespuesta.TabIndex = 3;
             this.lblrespuesta.Text = "X";
             // 
             // btnCalcularEstandar
             // 
-            this.btnCalcularEstandar.Location = new System.Drawing.Point(285, 260);
-            this.btnCalcularEstandar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnCalcularEstandar.Location = new System.Drawing.Point(340, 12);
             this.btnCalcularEstandar.Name = "btnCalcularEstandar";
-            this.btnCalcularEstandar.Size = new System.Drawing.Size(280, 76);
+            this.btnCalcularEstandar.Size = new System.Drawing.Size(105, 32);
             this.btnCalcularEstandar.TabIndex = 4;
             this.btnCalcularEstandar.Text = "Calcular Estandar";
             this.btnCalcularEstandar.UseVisualStyleBackColor = true;
@@ -95,10 +97,9 @@
             // 
             // btnCalcularTpica
             // 
-            this.btnCalcularTpica.Location = new System.Drawing.Point(581, 260);
-            this.btnCalcularTpica.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnCalcularTpica.Location = new System.Drawing.Point(451, 12);
             this.btnCalcularTpica.Name = "btnCalcularTpica";
-            this.btnCalcularTpica.Size = new System.Drawing.Size(229, 76);
+            this.btnCalcularTpica.Size = new System.Drawing.Size(86, 32);
             this.btnCalcularTpica.TabIndex = 5;
             this.btnCalcularTpica.Text = "Calcular Tipica";
             this.btnCalcularTpica.UseVisualStyleBackColor = true;
@@ -114,12 +115,14 @@
             this.fi,
             this.xixfi,
             this.x2ixfi});
-            this.grdEstadistica.Location = new System.Drawing.Point(57, 430);
+            this.grdEstadistica.Location = new System.Drawing.Point(20, 94);
+            this.grdEstadistica.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.grdEstadistica.Name = "grdEstadistica";
             this.grdEstadistica.RowHeadersWidth = 102;
             this.grdEstadistica.RowTemplate.Height = 40;
-            this.grdEstadistica.Size = new System.Drawing.Size(1316, 664);
+            this.grdEstadistica.Size = new System.Drawing.Size(510, 278);
             this.grdEstadistica.TabIndex = 6;
+            this.grdEstadistica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstadistica_CellContentClick);
             this.grdEstadistica.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grdEstadistica_KeyUp);
             // 
             // x1
@@ -127,41 +130,109 @@
             this.x1.HeaderText = "X1";
             this.x1.MinimumWidth = 12;
             this.x1.Name = "x1";
-            this.x1.Width = 250;
+            this.x1.Width = 60;
             // 
             // f1
             // 
             this.f1.HeaderText = "F1";
             this.f1.MinimumWidth = 12;
             this.f1.Name = "f1";
-            this.f1.Width = 250;
+            this.f1.Width = 60;
             // 
             // fi
             // 
             this.fi.HeaderText = "Fi";
             this.fi.MinimumWidth = 12;
             this.fi.Name = "fi";
-            this.fi.Width = 250;
+            this.fi.Width = 60;
             // 
             // xixfi
             // 
             this.xixfi.HeaderText = "Xi * Fi";
             this.xixfi.MinimumWidth = 12;
             this.xixfi.Name = "xixfi";
-            this.xixfi.Width = 150;
             // 
             // x2ixfi
             // 
             this.x2ixfi.HeaderText = "X2i * Fi";
             this.x2ixfi.MinimumWidth = 12;
             this.x2ixfi.Name = "x2ixfi";
-            this.x2ixfi.Width = 150;
+            // 
+            // lbltotalf1
+            // 
+            this.lbltotalf1.AutoSize = true;
+            this.lbltotalf1.Location = new System.Drawing.Point(196, 383);
+            this.lbltotalf1.Name = "lbltotalf1";
+            this.lbltotalf1.Size = new System.Drawing.Size(46, 13);
+            this.lbltotalf1.TabIndex = 7;
+            this.lbltotalf1.Text = "Total F1";
+            // 
+            // lbltotalxixfi
+            // 
+            this.lbltotalxixfi.AutoSize = true;
+            this.lbltotalxixfi.Location = new System.Drawing.Point(303, 383);
+            this.lbltotalxixfi.Name = "lbltotalxixfi";
+            this.lbltotalxixfi.Size = new System.Drawing.Size(58, 13);
+            this.lbltotalxixfi.TabIndex = 8;
+            this.lbltotalxixfi.Text = "Total x1*f1";
+            // 
+            // lbltotalx2ixfi
+            // 
+            this.lbltotalx2ixfi.AutoSize = true;
+            this.lbltotalx2ixfi.Location = new System.Drawing.Point(410, 383);
+            this.lbltotalx2ixfi.Name = "lbltotalx2ixfi";
+            this.lbltotalx2ixfi.Size = new System.Drawing.Size(64, 13);
+            this.lbltotalx2ixfi.TabIndex = 9;
+            this.lbltotalx2ixfi.Text = "Total x21*f1";
+            // 
+            // lbltotales
+            // 
+            this.lbltotales.AutoSize = true;
+            this.lbltotales.Location = new System.Drawing.Point(23, 383);
+            this.lbltotales.Name = "lbltotales";
+            this.lbltotales.Size = new System.Drawing.Size(59, 13);
+            this.lbltotales.TabIndex = 10;
+            this.lbltotales.Text = "TOTALES:";
+            // 
+            // lblmedia
+            // 
+            this.lblmedia.AutoSize = true;
+            this.lblmedia.Location = new System.Drawing.Point(23, 421);
+            this.lblmedia.Name = "lblmedia";
+            this.lblmedia.Size = new System.Drawing.Size(14, 13);
+            this.lblmedia.TabIndex = 11;
+            this.lblmedia.Text = "X";
+            // 
+            // lblestandar
+            // 
+            this.lblestandar.AutoSize = true;
+            this.lblestandar.Location = new System.Drawing.Point(161, 421);
+            this.lblestandar.Name = "lblestandar";
+            this.lblestandar.Size = new System.Drawing.Size(49, 13);
+            this.lblestandar.TabIndex = 12;
+            this.lblestandar.Text = "Estandar";
+            // 
+            // lbltipica
+            // 
+            this.lbltipica.AutoSize = true;
+            this.lbltipica.Location = new System.Drawing.Point(312, 421);
+            this.lbltipica.Name = "lbltipica";
+            this.lbltipica.Size = new System.Drawing.Size(36, 13);
+            this.lbltipica.TabIndex = 13;
+            this.lbltipica.Text = "Tipica";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1439, 1273);
+            this.ClientSize = new System.Drawing.Size(540, 443);
+            this.Controls.Add(this.lbltipica);
+            this.Controls.Add(this.lblestandar);
+            this.Controls.Add(this.lblmedia);
+            this.Controls.Add(this.lbltotales);
+            this.Controls.Add(this.lbltotalx2ixfi);
+            this.Controls.Add(this.lbltotalxixfi);
+            this.Controls.Add(this.lbltotalf1);
             this.Controls.Add(this.grdEstadistica);
             this.Controls.Add(this.btnCalcularTpica);
             this.Controls.Add(this.btnCalcularEstandar);
@@ -169,7 +240,6 @@
             this.Controls.Add(this.btnMediaAritmetica);
             this.Controls.Add(this.txtserie);
             this.Controls.Add(this.lblserie);
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form1";
             this.Text = "Calculos basicos Estadistica";
             ((System.ComponentModel.ISupportInitialize)(this.grdEstadistica)).EndInit();
@@ -192,6 +262,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fi;
         private System.Windows.Forms.DataGridViewTextBoxColumn xixfi;
         private System.Windows.Forms.DataGridViewTextBoxColumn x2ixfi;
+        private System.Windows.Forms.Label lbltotalf1;
+        private System.Windows.Forms.Label lbltotalxixfi;
+        private System.Windows.Forms.Label lbltotalx2ixfi;
+        private System.Windows.Forms.Label lbltotales;
+        private System.Windows.Forms.Label lblmedia;
+        private System.Windows.Forms.Label lblestandar;
+        private System.Windows.Forms.Label lbltipica;
     }
 }
 
