@@ -38,9 +38,13 @@ namespace programacionII_estadistica
             {
                 lblrespuesta.Text = objConversor.convertir(cbotipo.SelectedIndex, cbode.SelectedIndex,
                     cboa.SelectedIndex, double.Parse(txtcantidad.Text)).ToString();
-            }catch(Exception ex) {
-                MessageBox.Show("Ingrese los valores correspondiente.","Conversores",
-                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+                errorProvider1.SetError(txtcantidad, "");
+            }
+            catch(Exception ex) {
+                errorProvider1.SetError(txtcantidad, "Por favor digite la cantidad");
+                //MessageBox.Show("Ingrese los valores correspondiente.","Conversores",
+                 //   MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
     }
