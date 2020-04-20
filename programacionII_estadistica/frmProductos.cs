@@ -25,18 +25,27 @@ namespace programacionII_estadistica
         {
             actualizarDs();
             mostrarDatos();
+
+            cboCategoriaProductos.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cboCategoriaProductos.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
         void actualizarDs()
         {
             tbl = objConexion.obtener_datos().Tables["productos"];
             tbl.PrimaryKey = new DataColumn[] { tbl.Columns["idProducto"] };
+
+            cboCategoriaProductos.DataSource = objConexion.obtener_datos().Tables["categorias"];
+            cboCategoriaProductos.DisplayMember = "categoria";
+            cboCategoriaProductos.ValueMember = "categorias.idCategoria";
+
+
+            /*cboGrupoProductos.DataSource = objConexion.obtener_datos().Tables["grupos"];
+            cboGrupoProductos.DisplayMember = "grupo";
+            cboGrupoProductos.ValueMember = "grupos.idGrupo";*/
         }
         void mostrarDatos()
         {
             try{
-                cboCategoriaProductos.DataSource = objConexion.obtener_datos().Tables["categorias"];
-                cboCategoriaProductos.DisplayMember = "categoria";
-                cboCategoriaProductos.ValueMember = "categorias.idCategoria";
                 cboCategoriaProductos.SelectedValue = tbl.Rows[posicion].ItemArray[1].ToString();
 
                 lblidProducto.Text = tbl.Rows[posicion].ItemArray[0].ToString(); 
@@ -148,6 +157,27 @@ namespace programacionII_estadistica
 
                 btnNuevo.Text = "Nuevo";
                 btnModificar.Text = "Modificar";
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBusquedaProductos buscarProducto = new frmBusquedaProductos();
+            buscarProducto.ShowDialog(); 
+
+            if (buscarProducto._idProducto > 0) {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(buscarProducto._idProducto));
+                mostrarDatos();
+            }
+        }
+
+        private void btnBuscarCategoriaProductos_Click(object sender, EventArgs e)
+        {
+            frmBusquedaCategorias buscarCategoria = new frmBusquedaCategorias();
+            buscarCategoria.ShowDialog();
+
+            if (buscarCategoria._idCategoria > 0) {
+                cboCategoriaProductos.SelectedValue = buscarCategoria._idCategoria;
             }
         }
     }

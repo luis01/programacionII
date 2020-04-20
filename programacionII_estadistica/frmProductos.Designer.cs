@@ -40,6 +40,8 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbDatosProductos = new System.Windows.Forms.GroupBox();
+            this.cboCategoriaProductos = new System.Windows.Forms.ComboBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.lblidProducto = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,8 +53,7 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblcodigo = new System.Windows.Forms.Label();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.cboCategoriaProductos = new System.Windows.Forms.ComboBox();
+            this.btnBuscarCategoriaProductos = new System.Windows.Forms.Button();
             this.grbEdicion.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbDatosProductos.SuspendLayout();
@@ -79,6 +80,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btneliminar
             // 
@@ -173,6 +175,7 @@
             // 
             // grbDatosProductos
             // 
+            this.grbDatosProductos.Controls.Add(this.btnBuscarCategoriaProductos);
             this.grbDatosProductos.Controls.Add(this.cboCategoriaProductos);
             this.grbDatosProductos.Controls.Add(this.lblCategoria);
             this.grbDatosProductos.Controls.Add(this.lblidProducto);
@@ -193,6 +196,23 @@
             this.grbDatosProductos.TabIndex = 3;
             this.grbDatosProductos.TabStop = false;
             this.grbDatosProductos.Text = "Datos de Productos";
+            // 
+            // cboCategoriaProductos
+            // 
+            this.cboCategoriaProductos.FormattingEnabled = true;
+            this.cboCategoriaProductos.Location = new System.Drawing.Point(277, 94);
+            this.cboCategoriaProductos.Name = "cboCategoriaProductos";
+            this.cboCategoriaProductos.Size = new System.Drawing.Size(405, 39);
+            this.cboCategoriaProductos.TabIndex = 14;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(35, 94);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(188, 32);
+            this.lblCategoria.TabIndex = 13;
+            this.lblCategoria.Text = "CATEGORIA:";
             // 
             // lblidProducto
             // 
@@ -284,23 +304,15 @@
             this.lblcodigo.TabIndex = 0;
             this.lblcodigo.Text = "CODIGO:";
             // 
-            // lblCategoria
+            // btnBuscarCategoriaProductos
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(35, 94);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(188, 32);
-            this.lblCategoria.TabIndex = 13;
-            this.lblCategoria.Text = "CATEGORIA:";
-            // 
-            // cboCategoriaProductos
-            // 
-            this.cboCategoriaProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategoriaProductos.FormattingEnabled = true;
-            this.cboCategoriaProductos.Location = new System.Drawing.Point(277, 94);
-            this.cboCategoriaProductos.Name = "cboCategoriaProductos";
-            this.cboCategoriaProductos.Size = new System.Drawing.Size(405, 39);
-            this.cboCategoriaProductos.TabIndex = 14;
+            this.btnBuscarCategoriaProductos.Location = new System.Drawing.Point(688, 82);
+            this.btnBuscarCategoriaProductos.Name = "btnBuscarCategoriaProductos";
+            this.btnBuscarCategoriaProductos.Size = new System.Drawing.Size(340, 61);
+            this.btnBuscarCategoriaProductos.TabIndex = 15;
+            this.btnBuscarCategoriaProductos.Text = "Buscar Categorias";
+            this.btnBuscarCategoriaProductos.UseVisualStyleBackColor = true;
+            this.btnBuscarCategoriaProductos.Click += new System.EventHandler(this.btnBuscarCategoriaProductos_Click);
             // 
             // frmProductos
             // 
@@ -349,5 +361,6 @@
         private System.Windows.Forms.Label lblcodigo;
         private System.Windows.Forms.ComboBox cboCategoriaProductos;
         private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Button btnBuscarCategoriaProductos;
     }
 }

@@ -36,6 +36,10 @@ namespace programacionII_estadistica
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "productos");
 
+            comandosSQL.CommandText = "select categorias.categoria, productos.idProducto, productos.codigo, productos.nombre, productos.marca, productos.presentacion from productos inner join categorias on(categorias.idCategoria=productos.idCategoria)";
+            miAdaptadorDatos.SelectCommand = comandosSQL;
+            miAdaptadorDatos.Fill(ds, "productos_categorias");
+
             comandosSQL.CommandText = "select * from categorias";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "categorias");
@@ -89,6 +93,22 @@ namespace programacionII_estadistica
                     "WHERE idProducto = '" + datos[0] + "'";
             } else if (accion == "eliminar") {
                 sql = "DELETE productos FROM productos WHERE idProducto='" + datos[0] + "'";
+            }
+            procesarSQL(sql);
+        }
+        public void mantenimiento_datos_categorias(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo"){
+                sql = "INSERT INTO categorias (categoria) VALUES(" +
+                    "'" + datos[1] + "'" +
+                    ")";
+            }else if (accion == "modificar"){
+                sql = "UPDATE categorias SET " +
+                    "categoria            = '" + datos[1] + "'" +
+                    "WHERE idCategoria = '" + datos[0] + "'";
+            } else if (accion == "eliminar") {
+                sql = "DELETE productos FROM categorias WHERE idCategoria='" + datos[0] + "'";
             }
             procesarSQL(sql);
         }

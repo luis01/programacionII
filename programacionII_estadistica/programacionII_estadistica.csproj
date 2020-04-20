@@ -74,6 +74,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBusquedaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaCategorias.Designer.cs">
+      <DependentUpon>frmBusquedaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaProductos.Designer.cs">
+      <DependentUpon>frmBusquedaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +105,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaCategorias.resx">
+      <DependentUpon>frmBusquedaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaProductos.resx">
+      <DependentUpon>frmBusquedaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
@@ -127,6 +154,14 @@
     <None Include="Resources\iconfinder_289_Dollar_Globe_euro_money_convert_3990074.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\empresa.png" />
+    <None Include="Resources\stck.png" />
+    <None Include="Resources\productos.png" />
+    <None Include="Resources\producto.png" />
+    <None Include="Resources\empresa1.png" />
+    <None Include="Resources\bag.png" />
+    <None Include="Resources\compras.png" />
+    <None Include="Resources\ventas.png" />
     <Content Include="sistema_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
