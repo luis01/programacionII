@@ -180,5 +180,10 @@ namespace programacionII_estadistica
                 cboCategoriaProductos.SelectedValue = buscarCategoria._idCategoria;
             }
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            //Aqui ira el mensaje
+        }
     }
 }
