@@ -183,7 +183,7 @@ namespace programacionII_estadistica
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Eliminando...");
+            MessageBox.Show("Eliminando..."); 
         }
     }
 }
