@@ -14,6 +14,7 @@ namespace programacionII_estadistica
     {
         Conexion_db objConexion = new Conexion_db();
         public int _idProducto;
+        public String _nombreProducto, _codigoProducto;
         public frmBusquedaProductos()
         {
             InitializeComponent();
@@ -40,6 +41,8 @@ namespace programacionII_estadistica
         {
             if (grdBusquedaProductos.RowCount > 0) {
                 _idProducto = int.Parse(grdBusquedaProductos.CurrentRow.Cells["idProducto"].Value.ToString());
+                _nombreProducto = grdBusquedaProductos.CurrentRow.Cells["nombre"].Value.ToString();
+                _codigoProducto = grdBusquedaProductos.CurrentRow.Cells["codigo"].Value.ToString();
                 Close();
             } else {
                 MessageBox.Show("NO hay datos que seleccionar", "Busqueda de Clientes",
