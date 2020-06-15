@@ -35,10 +35,10 @@
             System.Windows.Forms.Label fecha_ventaLabel;
             System.Windows.Forms.Label tipodocumentoLabel;
             System.Windows.Forms.Label tipoventaLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistema_dbDataSet = new programacionII_estadistica.sistema_dbDataSet();
             this.idVentaTextBox = new System.Windows.Forms.TextBox();
@@ -81,6 +81,7 @@
             this.condiciones_pagosTableAdapter = new programacionII_estadistica.sistema_dbDataSetTableAdapters.condiciones_pagosTableAdapter();
             this.tipo_documentoTableAdapter = new programacionII_estadistica.sistema_dbDataSetTableAdapters.tipo_documentoTableAdapter();
             this.pnlEdicion = new System.Windows.Forms.Panel();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -348,9 +349,9 @@
             // cantidad
             // 
             this.cantidad.DataPropertyName = "cantidad";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.NullValue = null;
-            this.cantidad.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = null;
+            this.cantidad.DefaultCellStyle = dataGridViewCellStyle1;
             this.cantidad.HeaderText = "CANT";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
@@ -359,9 +360,9 @@
             // precio
             // 
             this.precio.DataPropertyName = "precio";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.NullValue = null;
-            this.precio.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.NullValue = null;
+            this.precio.DefaultCellStyle = dataGridViewCellStyle2;
             this.precio.HeaderText = "PRECIO";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
@@ -370,9 +371,9 @@
             // descuento
             // 
             this.descuento.DataPropertyName = "descuento";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.NullValue = null;
-            this.descuento.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.NullValue = null;
+            this.descuento.DefaultCellStyle = dataGridViewCellStyle3;
             this.descuento.HeaderText = "DESC";
             this.descuento.Name = "descuento";
             this.descuento.ReadOnly = true;
@@ -381,9 +382,9 @@
             // subtotal
             // 
             this.subtotal.DataPropertyName = "subtotal";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.NullValue = null;
-            this.subtotal.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.NullValue = null;
+            this.subtotal.DefaultCellStyle = dataGridViewCellStyle4;
             this.subtotal.HeaderText = "SUB TOTAL";
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
@@ -400,15 +401,15 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblSumaVenta);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(503, 327);
+            this.panel1.Location = new System.Drawing.Point(531, 327);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(151, 95);
+            this.panel1.Size = new System.Drawing.Size(123, 95);
             this.panel1.TabIndex = 14;
             // 
             // lblTotalVenta
             // 
             this.lblTotalVenta.AutoSize = true;
-            this.lblTotalVenta.Location = new System.Drawing.Point(102, 61);
+            this.lblTotalVenta.Location = new System.Drawing.Point(69, 61);
             this.lblTotalVenta.Name = "lblTotalVenta";
             this.lblTotalVenta.Size = new System.Drawing.Size(46, 13);
             this.lblTotalVenta.TabIndex = 5;
@@ -417,7 +418,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 61);
+            this.label4.Location = new System.Drawing.Point(2, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 4;
@@ -426,7 +427,7 @@
             // lblIvaVenta
             // 
             this.lblIvaVenta.AutoSize = true;
-            this.lblIvaVenta.Location = new System.Drawing.Point(114, 36);
+            this.lblIvaVenta.Location = new System.Drawing.Point(81, 36);
             this.lblIvaVenta.Name = "lblIvaVenta";
             this.lblIvaVenta.Size = new System.Drawing.Size(34, 13);
             this.lblIvaVenta.TabIndex = 3;
@@ -435,7 +436,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 36);
+            this.label3.Location = new System.Drawing.Point(20, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 2;
@@ -444,7 +445,7 @@
             // lblSumaVenta
             // 
             this.lblSumaVenta.AutoSize = true;
-            this.lblSumaVenta.Location = new System.Drawing.Point(102, 12);
+            this.lblSumaVenta.Location = new System.Drawing.Point(69, 12);
             this.lblSumaVenta.Name = "lblSumaVenta";
             this.lblSumaVenta.Size = new System.Drawing.Size(46, 13);
             this.lblSumaVenta.TabIndex = 1;
@@ -453,7 +454,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Location = new System.Drawing.Point(6, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
@@ -530,18 +531,29 @@
             // 
             // pnlEdicion
             // 
+            this.pnlEdicion.Controls.Add(this.btnImprimir);
             this.pnlEdicion.Controls.Add(this.btnBuscar);
             this.pnlEdicion.Controls.Add(this.btnEliminar);
             this.pnlEdicion.Controls.Add(this.btnModificar);
             this.pnlEdicion.Controls.Add(this.btnAgregar);
-            this.pnlEdicion.Location = new System.Drawing.Point(230, 373);
+            this.pnlEdicion.Location = new System.Drawing.Point(227, 373);
             this.pnlEdicion.Name = "pnlEdicion";
-            this.pnlEdicion.Size = new System.Drawing.Size(260, 49);
+            this.pnlEdicion.Size = new System.Drawing.Size(300, 49);
             this.pnlEdicion.TabIndex = 16;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(221, 3);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(73, 38);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(200, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(171, 3);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(53, 38);
             this.btnBuscar.TabIndex = 3;
@@ -550,7 +562,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(146, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(120, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(53, 38);
             this.btnEliminar.TabIndex = 2;
@@ -559,9 +571,9 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(73, 3);
+            this.btnModificar.Location = new System.Drawing.Point(59, 3);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(72, 38);
+            this.btnModificar.Size = new System.Drawing.Size(63, 38);
             this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -569,9 +581,9 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(5, 3);
+            this.btnAgregar.Location = new System.Drawing.Point(2, 3);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(67, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(59, 38);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Nuevo";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -709,5 +721,6 @@
         private System.Windows.Forms.Button btnQuitarProductosGrid;
         private System.Windows.Forms.Button btnAgregarProductosGrid;
         private sistema_dbDataSetTableAdapters.dventasTableAdapter dventasTableAdapter1;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

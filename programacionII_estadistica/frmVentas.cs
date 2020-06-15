@@ -126,8 +126,7 @@ namespace programacionII_estadistica
 
                 habdes_controles(false);//habilitar los controles...
                 ventasBindingSource.AddNew();//agregamos un registro nuevo...
-            }
-            else {//guardar
+            }else {//guardar
                 _idVenta = int.Parse(idVentaTextBox.Text);
                 this.Validate();
                 this.ventasBindingSource.EndEdit();
@@ -168,6 +167,7 @@ namespace programacionII_estadistica
                         int.Parse(dventas[i, 3])
                     );
                 }
+                ventasTableAdapter.Connection.Close();
                 actualziarDs();
                 ventasBindingSource.MoveLast();
 
@@ -223,6 +223,12 @@ namespace programacionII_estadistica
             }catch(Exception ex) {
                 //
             }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            frmImpresionVenta imprimir = new frmImpresionVenta(int.Parse(idVentaTextBox.Text));
+            imprimir.ShowDialog();
         }
     }
 }
