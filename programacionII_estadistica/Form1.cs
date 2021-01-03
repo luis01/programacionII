@@ -12,68 +12,166 @@ namespace programacionII_estadistica
 {
     public partial class Form1 : Form
     {
-        estadsitica objEstadistica = new estadsitica();
+        Conexion_db objConexion = new Conexion_db();
+        int posicion = 0;
+        string accion = "nuevo";
+        DataTable tbl = new DataTable();
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void btnMediaAritmetica_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            //split => divide una cadena en base a un delimitador (patron) y devuelve una matriz
-            lblrespuesta.Text = "X="+ objEstadistica.media(txtserie.Text.Split(','));
+            actualizarDs();
+            mostrarDatos();
         }
-
-        private void btnCalcularEstandar_Click(object sender, EventArgs e)
+        void actualizarDs()
         {
-            lblrespuesta.Text = "Estandar=" + objEstadistica.estandar(txtserie.Text.Split(','));
+            tbl = objConexion.obtener_datos().Tables["clientes"];
+            tbl.PrimaryKey = new DataColumn[] {tbl.Columns["idCliente"]};
         }
-
-        private void btnCalcularTpica_Click(object sender, EventArgs e)
+        void mostrarDatos()
         {
-            lblrespuesta.Text = "Tipica=" + objEstadistica.tipica(txtserie.Text.Split(','));
-        }
+            try
+            {
+                lblidCliente.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                txtcodigo.Text = tbl.Rows[posicion].ItemArray[1].ToString();
+                txtnombre.Text = tbl.Rows[posicion].ItemArray[2].ToString();
+                txtdireccion.Text = tbl.Rows[posicion].ItemArray[3].ToString();
+                txttelefono.Text = tbl.Rows[posicion].ItemArray[4].ToString();
+                txtdui.Text = tbl.Rows[posicion].ItemArray[5].ToString();
+                txtnit.Text = tbl.Rows[posicion].ItemArray[6].ToString();
 
-        private void grdEstadistica_KeyUp(object sender, KeyEventArgs e)
-        {
-            try{
-                int nfilas = grdEstadistica.Rows.Count - 1,
-                    sumaf1 = 0,
-                    sumaxixfi = 0;
-                double sumax2ixfi = 0;
-                DataGridViewRow fila;
-
-                for (int i = 0; i < nfilas; i++){
-                    fila = grdEstadistica.Rows[i];
-                    int x1 = int.Parse(fila.Cells["x1"].Value.ToString()),
-                        f1 = int.Parse(fila.Cells["f1"].Value.ToString());
-                    sumaf1 += f1;
-                    sumaxixfi += x1 * f1;
-                    sumax2ixfi += Math.Pow(x1, 2) * f1;
-
-                    fila.Cells["fi"].Value = sumaf1.ToString();
-                    fila.Cells["xixfi"].Value = (x1*f1).ToString();
-                    fila.Cells["x2ixfi"].Value = ( Math.Pow(x1,2) * f1).ToString();
-                }
-                lbltotalf1.Text = sumaf1.ToString();
-                lbltotalxixfi.Text = sumaxixfi.ToString();
-                lbltotalx2ixfi.Text = sumax2ixfi.ToString();
-
-                double media = sumaxixfi / sumaf1,
-                    standar = sumax2ixfi / sumaf1 - Math.Pow(media,2),
-                    tipica = Math.Sqrt(standar);
-           
-                lblmedia.Text = media.ToString();
-                lblestandar.Text = standar.ToString();
-                lbltipica.Text = tipica.ToString();
-            }
-            catch(Exception error) { 
-                
+                lblnregistros.Text = (posicion + 1) + " de " + tbl.Rows.Count;
+            }catch(Exception ex) {
+                MessageBox.Show("No hay Datos que mostrar", "Registros de Cliente",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpiar_cajas();
             }
         }
-        private void grdEstadistica_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void btnprimero_Click(object sender, EventArgs e)
+        {
+            posicion = 0;
+            mostrarDatos();
+        }
+
+        private void btnanterior_Click(object sender, EventArgs e)
+        {
+            if (posicion>0) {
+                posicion--;
+                mostrarDatos();
+            } else {
+                MessageBox.Show("Primer Registro...","Registros de Cliente",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnsiguiente_Click(object sender, EventArgs e)
+        {
+            if (posicion < tbl.Rows.Count-1){
+                posicion++;
+                mostrarDatos();
+            } else {
+                MessageBox.Show("Ultimo Registro...", "Registros de Cliente",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void btnultimo_Click(object sender, EventArgs e)
+        {
+            posicion = tbl.Rows.Count - 1;
+            mostrarDatos();
+        }
+        void limpiar_cajas()
+        {
+            txtcodigo.Text = "";
+            txtnombre.Text = "";
+            txtdireccion.Text = "";
+            txttelefono.Text = "";
+            txtdui.Text = "";
+            txtnit.Text = "";
+        }
+        void controles(Boolean valor)
+        {
+            grbNavegacion.Enabled = valor;
+            btneliminar.Enabled = valor;
+            btnBuscar.Enabled = valor;
+            grbDatosClientes.Enabled = !valor;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            if (btnNuevo.Text == "Nuevo") {//boton de nuevo
+                btnNuevo.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
+                accion = "nuevo";
+
+                limpiar_cajas();
+                controles(false);
+            } else { //boton de guardar
+                String[] valores = {
+                    lblidCliente.Text,
+                    txtcodigo.Text,
+                    txtnombre.Text,
+                    txtdireccion.Text,
+                    txttelefono.Text,
+                    txtdui.Text,
+                    txtnit.Text
+                };
+                objConexion.mantenimiento_datos(valores, accion);
+                actualizarDs();
+                posicion = tbl.Rows.Count - 1;
+                mostrarDatos();
+
+                controles(true);
+                 
+                btnNuevo.Text = "Nuevo";
+                btnModificar.Text = "Modificar";
+            }
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (btnModificar.Text == "Modificar") {//boton de modificar
+                btnNuevo.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
+                accion = "modificar";
+
+                controles(false);
+
+                btnNuevo.Text = "Guardar";
+                btnModificar.Text = "Cancelar";
+
+            } else { //boton de cancelar
+                controles(true);
+                mostrarDatos();
+
+                btnNuevo.Text = "Nuevo";
+                btnModificar.Text = "Modificar";
+            }
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro de elimina a " + txtnombre.Text, "Registro de Clientes",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                String[] valores = { lblidCliente.Text };
+                objConexion.mantenimiento_datos(valores, "eliminar");
+
+                actualizarDs();
+                posicion = posicion > 0 ? posicion - 1 : 0;
+                mostrarDatos();
+            }
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            busqueda_clientes frmBusquedaClientes = new busqueda_clientes();
+            frmBusquedaClientes.ShowDialog();
+
+            if (frmBusquedaClientes._idCliente > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusquedaClientes._idCliente));
+                mostrarDatos();
+            }
         }
     }
 }

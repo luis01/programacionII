@@ -16,7 +16,7 @@ namespace programacionII_estadistica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new principal());
+            Application.Run(new frmVentas());
         }
     }
 }

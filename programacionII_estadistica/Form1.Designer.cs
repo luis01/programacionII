@@ -28,247 +28,393 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblserie = new System.Windows.Forms.Label();
-            this.txtserie = new System.Windows.Forms.TextBox();
-            this.btnMediaAritmetica = new System.Windows.Forms.Button();
-            this.lblrespuesta = new System.Windows.Forms.Label();
-            this.btnCalcularEstandar = new System.Windows.Forms.Button();
-            this.btnCalcularTpica = new System.Windows.Forms.Button();
-            this.grdEstadistica = new System.Windows.Forms.DataGridView();
-            this.x1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.f1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.x2ixfi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbltotalf1 = new System.Windows.Forms.Label();
-            this.lbltotalxixfi = new System.Windows.Forms.Label();
-            this.lbltotalx2ixfi = new System.Windows.Forms.Label();
-            this.lbltotales = new System.Windows.Forms.Label();
-            this.lblmedia = new System.Windows.Forms.Label();
-            this.lblestandar = new System.Windows.Forms.Label();
-            this.lbltipica = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEstadistica)).BeginInit();
+            this.grbDatosClientes = new System.Windows.Forms.GroupBox();
+            this.lblidCliente = new System.Windows.Forms.Label();
+            this.txtnit = new System.Windows.Forms.TextBox();
+            this.lblnit = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtdui = new System.Windows.Forms.TextBox();
+            this.lbldui = new System.Windows.Forms.Label();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.lbltelefono = new System.Windows.Forms.Label();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.lbldireccion = new System.Windows.Forms.Label();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.lblnombre = new System.Windows.Forms.Label();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.lblcodigo = new System.Windows.Forms.Label();
+            this.grbNavegacion = new System.Windows.Forms.GroupBox();
+            this.lblnregistros = new System.Windows.Forms.Label();
+            this.btnultimo = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
+            this.btnanterior = new System.Windows.Forms.Button();
+            this.btnprimero = new System.Windows.Forms.Button();
+            this.grbEdicion = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.grbDatosClientes.SuspendLayout();
+            this.grbNavegacion.SuspendLayout();
+            this.grbEdicion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblserie
+            // grbDatosClientes
             // 
-            this.lblserie.AutoSize = true;
-            this.lblserie.Location = new System.Drawing.Point(17, 22);
-            this.lblserie.Name = "lblserie";
-            this.lblserie.Size = new System.Drawing.Size(42, 13);
-            this.lblserie.TabIndex = 0;
-            this.lblserie.Text = "SERIE:";
+            this.grbDatosClientes.Controls.Add(this.lblidCliente);
+            this.grbDatosClientes.Controls.Add(this.txtnit);
+            this.grbDatosClientes.Controls.Add(this.lblnit);
+            this.grbDatosClientes.Controls.Add(this.textBox6);
+            this.grbDatosClientes.Controls.Add(this.label6);
+            this.grbDatosClientes.Controls.Add(this.txtdui);
+            this.grbDatosClientes.Controls.Add(this.lbldui);
+            this.grbDatosClientes.Controls.Add(this.txttelefono);
+            this.grbDatosClientes.Controls.Add(this.lbltelefono);
+            this.grbDatosClientes.Controls.Add(this.txtdireccion);
+            this.grbDatosClientes.Controls.Add(this.lbldireccion);
+            this.grbDatosClientes.Controls.Add(this.txtnombre);
+            this.grbDatosClientes.Controls.Add(this.lblnombre);
+            this.grbDatosClientes.Controls.Add(this.txtcodigo);
+            this.grbDatosClientes.Controls.Add(this.lblcodigo);
+            this.grbDatosClientes.Enabled = false;
+            this.grbDatosClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbDatosClientes.ForeColor = System.Drawing.Color.White;
+            this.grbDatosClientes.Location = new System.Drawing.Point(42, 42);
+            this.grbDatosClientes.Name = "grbDatosClientes";
+            this.grbDatosClientes.Size = new System.Drawing.Size(1268, 790);
+            this.grbDatosClientes.TabIndex = 0;
+            this.grbDatosClientes.TabStop = false;
+            this.grbDatosClientes.Text = "Datos de Cliente";
             // 
-            // txtserie
+            // lblidCliente
             // 
-            this.txtserie.Location = new System.Drawing.Point(65, 19);
-            this.txtserie.Name = "txtserie";
-            this.txtserie.Size = new System.Drawing.Size(184, 20);
-            this.txtserie.TabIndex = 1;
+            this.lblidCliente.AutoSize = true;
+            this.lblidCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidCliente.ForeColor = System.Drawing.Color.White;
+            this.lblidCliente.Location = new System.Drawing.Point(446, 87);
+            this.lblidCliente.Name = "lblidCliente";
+            this.lblidCliente.Size = new System.Drawing.Size(53, 32);
+            this.lblidCliente.TabIndex = 12;
+            this.lblidCliente.Text = "ID:";
             // 
-            // btnMediaAritmetica
+            // txtnit
             // 
-            this.btnMediaAritmetica.Location = new System.Drawing.Point(255, 12);
-            this.btnMediaAritmetica.Name = "btnMediaAritmetica";
-            this.btnMediaAritmetica.Size = new System.Drawing.Size(79, 32);
-            this.btnMediaAritmetica.TabIndex = 2;
-            this.btnMediaAritmetica.Text = "Calcular X";
-            this.btnMediaAritmetica.UseVisualStyleBackColor = true;
-            this.btnMediaAritmetica.Click += new System.EventHandler(this.btnMediaAritmetica_Click);
+            this.txtnit.Location = new System.Drawing.Point(219, 655);
+            this.txtnit.Name = "txtnit";
+            this.txtnit.Size = new System.Drawing.Size(358, 38);
+            this.txtnit.TabIndex = 11;
             // 
-            // lblrespuesta
+            // lblnit
             // 
-            this.lblrespuesta.AutoSize = true;
-            this.lblrespuesta.Location = new System.Drawing.Point(23, 47);
-            this.lblrespuesta.Name = "lblrespuesta";
-            this.lblrespuesta.Size = new System.Drawing.Size(14, 13);
-            this.lblrespuesta.TabIndex = 3;
-            this.lblrespuesta.Text = "X";
+            this.lblnit.AutoSize = true;
+            this.lblnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnit.ForeColor = System.Drawing.Color.White;
+            this.lblnit.Location = new System.Drawing.Point(48, 661);
+            this.lblnit.Name = "lblnit";
+            this.lblnit.Size = new System.Drawing.Size(71, 32);
+            this.lblnit.TabIndex = 10;
+            this.lblnit.Text = "NIT:";
             // 
-            // btnCalcularEstandar
+            // textBox6
             // 
-            this.btnCalcularEstandar.Location = new System.Drawing.Point(340, 12);
-            this.btnCalcularEstandar.Name = "btnCalcularEstandar";
-            this.btnCalcularEstandar.Size = new System.Drawing.Size(105, 32);
-            this.btnCalcularEstandar.TabIndex = 4;
-            this.btnCalcularEstandar.Text = "Calcular Estandar";
-            this.btnCalcularEstandar.UseVisualStyleBackColor = true;
-            this.btnCalcularEstandar.Click += new System.EventHandler(this.btnCalcularEstandar_Click);
+            this.textBox6.Location = new System.Drawing.Point(410, 1355);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 38);
+            this.textBox6.TabIndex = 9;
             // 
-            // btnCalcularTpica
+            // label6
             // 
-            this.btnCalcularTpica.Location = new System.Drawing.Point(451, 12);
-            this.btnCalcularTpica.Name = "btnCalcularTpica";
-            this.btnCalcularTpica.Size = new System.Drawing.Size(86, 32);
-            this.btnCalcularTpica.TabIndex = 5;
-            this.btnCalcularTpica.Text = "Calcular Tipica";
-            this.btnCalcularTpica.UseVisualStyleBackColor = true;
-            this.btnCalcularTpica.Click += new System.EventHandler(this.btnCalcularTpica_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(120, 1355);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 32);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "label6";
             // 
-            // grdEstadistica
+            // txtdui
             // 
-            this.grdEstadistica.AllowUserToDeleteRows = false;
-            this.grdEstadistica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEstadistica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.x1,
-            this.f1,
-            this.fi,
-            this.xixfi,
-            this.x2ixfi});
-            this.grdEstadistica.Location = new System.Drawing.Point(20, 94);
-            this.grdEstadistica.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.grdEstadistica.Name = "grdEstadistica";
-            this.grdEstadistica.RowHeadersWidth = 102;
-            this.grdEstadistica.RowTemplate.Height = 40;
-            this.grdEstadistica.Size = new System.Drawing.Size(510, 278);
-            this.grdEstadistica.TabIndex = 6;
-            this.grdEstadistica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstadistica_CellContentClick);
-            this.grdEstadistica.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grdEstadistica_KeyUp);
+            this.txtdui.Location = new System.Drawing.Point(219, 564);
+            this.txtdui.Name = "txtdui";
+            this.txtdui.Size = new System.Drawing.Size(358, 38);
+            this.txtdui.TabIndex = 7;
             // 
-            // x1
+            // lbldui
             // 
-            this.x1.HeaderText = "X1";
-            this.x1.MinimumWidth = 12;
-            this.x1.Name = "x1";
-            this.x1.Width = 60;
+            this.lbldui.AutoSize = true;
+            this.lbldui.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldui.ForeColor = System.Drawing.Color.White;
+            this.lbldui.Location = new System.Drawing.Point(48, 570);
+            this.lbldui.Name = "lbldui";
+            this.lbldui.Size = new System.Drawing.Size(74, 32);
+            this.lbldui.TabIndex = 6;
+            this.lbldui.Text = "DUI:";
             // 
-            // f1
+            // txttelefono
             // 
-            this.f1.HeaderText = "F1";
-            this.f1.MinimumWidth = 12;
-            this.f1.Name = "f1";
-            this.f1.Width = 60;
+            this.txttelefono.Location = new System.Drawing.Point(219, 490);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(209, 38);
+            this.txttelefono.TabIndex = 5;
             // 
-            // fi
+            // lbltelefono
             // 
-            this.fi.HeaderText = "Fi";
-            this.fi.MinimumWidth = 12;
-            this.fi.Name = "fi";
-            this.fi.Width = 60;
+            this.lbltelefono.AutoSize = true;
+            this.lbltelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltelefono.ForeColor = System.Drawing.Color.White;
+            this.lbltelefono.Location = new System.Drawing.Point(35, 490);
+            this.lbltelefono.Name = "lbltelefono";
+            this.lbltelefono.Size = new System.Drawing.Size(79, 32);
+            this.lbltelefono.TabIndex = 4;
+            this.lbltelefono.Text = "TEL:";
             // 
-            // xixfi
+            // txtdireccion
             // 
-            this.xixfi.HeaderText = "Xi * Fi";
-            this.xixfi.MinimumWidth = 12;
-            this.xixfi.Name = "xixfi";
+            this.txtdireccion.Location = new System.Drawing.Point(219, 213);
+            this.txtdireccion.Multiline = true;
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(745, 238);
+            this.txtdireccion.TabIndex = 3;
             // 
-            // x2ixfi
+            // lbldireccion
             // 
-            this.x2ixfi.HeaderText = "X2i * Fi";
-            this.x2ixfi.MinimumWidth = 12;
-            this.x2ixfi.Name = "x2ixfi";
+            this.lbldireccion.AutoSize = true;
+            this.lbldireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldireccion.ForeColor = System.Drawing.Color.White;
+            this.lbldireccion.Location = new System.Drawing.Point(35, 245);
+            this.lbldireccion.Name = "lbldireccion";
+            this.lbldireccion.Size = new System.Drawing.Size(188, 32);
+            this.lbldireccion.TabIndex = 2;
+            this.lbldireccion.Text = "DIRECCION:";
             // 
-            // lbltotalf1
+            // txtnombre
             // 
-            this.lbltotalf1.AutoSize = true;
-            this.lbltotalf1.Location = new System.Drawing.Point(196, 383);
-            this.lbltotalf1.Name = "lbltotalf1";
-            this.lbltotalf1.Size = new System.Drawing.Size(46, 13);
-            this.lbltotalf1.TabIndex = 7;
-            this.lbltotalf1.Text = "Total F1";
+            this.txtnombre.Location = new System.Drawing.Point(219, 151);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(540, 38);
+            this.txtnombre.TabIndex = 3;
             // 
-            // lbltotalxixfi
+            // lblnombre
             // 
-            this.lbltotalxixfi.AutoSize = true;
-            this.lbltotalxixfi.Location = new System.Drawing.Point(303, 383);
-            this.lbltotalxixfi.Name = "lbltotalxixfi";
-            this.lbltotalxixfi.Size = new System.Drawing.Size(58, 13);
-            this.lbltotalxixfi.TabIndex = 8;
-            this.lbltotalxixfi.Text = "Total x1*f1";
+            this.lblnombre.AutoSize = true;
+            this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.ForeColor = System.Drawing.Color.White;
+            this.lblnombre.Location = new System.Drawing.Point(39, 151);
+            this.lblnombre.Name = "lblnombre";
+            this.lblnombre.Size = new System.Drawing.Size(153, 32);
+            this.lblnombre.TabIndex = 2;
+            this.lblnombre.Text = "NOMBRE:";
             // 
-            // lbltotalx2ixfi
+            // txtcodigo
             // 
-            this.lbltotalx2ixfi.AutoSize = true;
-            this.lbltotalx2ixfi.Location = new System.Drawing.Point(410, 383);
-            this.lbltotalx2ixfi.Name = "lbltotalx2ixfi";
-            this.lbltotalx2ixfi.Size = new System.Drawing.Size(64, 13);
-            this.lbltotalx2ixfi.TabIndex = 9;
-            this.lbltotalx2ixfi.Text = "Total x21*f1";
+            this.txtcodigo.Location = new System.Drawing.Point(219, 84);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(196, 38);
+            this.txtcodigo.TabIndex = 1;
             // 
-            // lbltotales
+            // lblcodigo
             // 
-            this.lbltotales.AutoSize = true;
-            this.lbltotales.Location = new System.Drawing.Point(23, 383);
-            this.lbltotales.Name = "lbltotales";
-            this.lbltotales.Size = new System.Drawing.Size(59, 13);
-            this.lbltotales.TabIndex = 10;
-            this.lbltotales.Text = "TOTALES:";
+            this.lblcodigo.AutoSize = true;
+            this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcodigo.ForeColor = System.Drawing.Color.White;
+            this.lblcodigo.Location = new System.Drawing.Point(39, 84);
+            this.lblcodigo.Name = "lblcodigo";
+            this.lblcodigo.Size = new System.Drawing.Size(143, 32);
+            this.lblcodigo.TabIndex = 0;
+            this.lblcodigo.Text = "CODIGO:";
             // 
-            // lblmedia
+            // grbNavegacion
             // 
-            this.lblmedia.AutoSize = true;
-            this.lblmedia.Location = new System.Drawing.Point(23, 421);
-            this.lblmedia.Name = "lblmedia";
-            this.lblmedia.Size = new System.Drawing.Size(14, 13);
-            this.lblmedia.TabIndex = 11;
-            this.lblmedia.Text = "X";
+            this.grbNavegacion.Controls.Add(this.lblnregistros);
+            this.grbNavegacion.Controls.Add(this.btnultimo);
+            this.grbNavegacion.Controls.Add(this.btnsiguiente);
+            this.grbNavegacion.Controls.Add(this.btnanterior);
+            this.grbNavegacion.Controls.Add(this.btnprimero);
+            this.grbNavegacion.ForeColor = System.Drawing.Color.White;
+            this.grbNavegacion.Location = new System.Drawing.Point(42, 863);
+            this.grbNavegacion.Name = "grbNavegacion";
+            this.grbNavegacion.Size = new System.Drawing.Size(591, 135);
+            this.grbNavegacion.TabIndex = 1;
+            this.grbNavegacion.TabStop = false;
+            this.grbNavegacion.Text = "Navegacion";
             // 
-            // lblestandar
+            // lblnregistros
             // 
-            this.lblestandar.AutoSize = true;
-            this.lblestandar.Location = new System.Drawing.Point(161, 421);
-            this.lblestandar.Name = "lblestandar";
-            this.lblestandar.Size = new System.Drawing.Size(49, 13);
-            this.lblestandar.TabIndex = 12;
-            this.lblestandar.Text = "Estandar";
+            this.lblnregistros.AutoSize = true;
+            this.lblnregistros.Location = new System.Drawing.Point(222, 61);
+            this.lblnregistros.Name = "lblnregistros";
+            this.lblnregistros.Size = new System.Drawing.Size(0, 32);
+            this.lblnregistros.TabIndex = 13;
             // 
-            // lbltipica
+            // btnultimo
             // 
-            this.lbltipica.AutoSize = true;
-            this.lbltipica.Location = new System.Drawing.Point(312, 421);
-            this.lbltipica.Name = "lbltipica";
-            this.lbltipica.Size = new System.Drawing.Size(36, 13);
-            this.lbltipica.TabIndex = 13;
-            this.lbltipica.Text = "Tipica";
+            this.btnultimo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnultimo.ForeColor = System.Drawing.Color.White;
+            this.btnultimo.Location = new System.Drawing.Point(485, 37);
+            this.btnultimo.Name = "btnultimo";
+            this.btnultimo.Size = new System.Drawing.Size(106, 79);
+            this.btnultimo.TabIndex = 3;
+            this.btnultimo.Text = ">|";
+            this.btnultimo.UseVisualStyleBackColor = false;
+            this.btnultimo.Click += new System.EventHandler(this.btnultimo_Click);
+            // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnsiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsiguiente.ForeColor = System.Drawing.Color.White;
+            this.btnsiguiente.Location = new System.Drawing.Point(381, 37);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(106, 79);
+            this.btnsiguiente.TabIndex = 2;
+            this.btnsiguiente.Text = ">";
+            this.btnsiguiente.UseVisualStyleBackColor = false;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
+            // btnanterior
+            // 
+            this.btnanterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnanterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnanterior.ForeColor = System.Drawing.Color.White;
+            this.btnanterior.Location = new System.Drawing.Point(110, 37);
+            this.btnanterior.Name = "btnanterior";
+            this.btnanterior.Size = new System.Drawing.Size(106, 79);
+            this.btnanterior.TabIndex = 1;
+            this.btnanterior.Text = "<";
+            this.btnanterior.UseVisualStyleBackColor = false;
+            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
+            // 
+            // btnprimero
+            // 
+            this.btnprimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnprimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnprimero.ForeColor = System.Drawing.Color.White;
+            this.btnprimero.Location = new System.Drawing.Point(6, 37);
+            this.btnprimero.Name = "btnprimero";
+            this.btnprimero.Size = new System.Drawing.Size(106, 79);
+            this.btnprimero.TabIndex = 0;
+            this.btnprimero.Text = "|<";
+            this.btnprimero.UseVisualStyleBackColor = false;
+            this.btnprimero.Click += new System.EventHandler(this.btnprimero_Click);
+            // 
+            // grbEdicion
+            // 
+            this.grbEdicion.Controls.Add(this.btnBuscar);
+            this.grbEdicion.Controls.Add(this.btneliminar);
+            this.grbEdicion.Controls.Add(this.btnModificar);
+            this.grbEdicion.Controls.Add(this.btnNuevo);
+            this.grbEdicion.ForeColor = System.Drawing.Color.White;
+            this.grbEdicion.Location = new System.Drawing.Point(639, 863);
+            this.grbEdicion.Name = "grbEdicion";
+            this.grbEdicion.Size = new System.Drawing.Size(671, 135);
+            this.grbEdicion.TabIndex = 2;
+            this.grbEdicion.TabStop = false;
+            this.grbEdicion.Text = "Edicion de Clientes";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(497, 37);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(165, 79);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btneliminar.ForeColor = System.Drawing.Color.White;
+            this.btneliminar.Location = new System.Drawing.Point(333, 37);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(165, 79);
+            this.btneliminar.TabIndex = 4;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = false;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(169, 37);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(165, 79);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(7, 37);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(161, 79);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 443);
-            this.Controls.Add(this.lbltipica);
-            this.Controls.Add(this.lblestandar);
-            this.Controls.Add(this.lblmedia);
-            this.Controls.Add(this.lbltotales);
-            this.Controls.Add(this.lbltotalx2ixfi);
-            this.Controls.Add(this.lbltotalxixfi);
-            this.Controls.Add(this.lbltotalf1);
-            this.Controls.Add(this.grdEstadistica);
-            this.Controls.Add(this.btnCalcularTpica);
-            this.Controls.Add(this.btnCalcularEstandar);
-            this.Controls.Add(this.lblrespuesta);
-            this.Controls.Add(this.btnMediaAritmetica);
-            this.Controls.Add(this.txtserie);
-            this.Controls.Add(this.lblserie);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1357, 1096);
+            this.Controls.Add(this.grbEdicion);
+            this.Controls.Add(this.grbNavegacion);
+            this.Controls.Add(this.grbDatosClientes);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form1";
-            this.Text = "Calculos basicos Estadistica";
-            ((System.ComponentModel.ISupportInitialize)(this.grdEstadistica)).EndInit();
+            this.Text = "MANTENIMIENTO CLIENTES";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.grbDatosClientes.ResumeLayout(false);
+            this.grbDatosClientes.PerformLayout();
+            this.grbNavegacion.ResumeLayout(false);
+            this.grbNavegacion.PerformLayout();
+            this.grbEdicion.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblserie;
-        private System.Windows.Forms.TextBox txtserie;
-        private System.Windows.Forms.Button btnMediaAritmetica;
-        private System.Windows.Forms.Label lblrespuesta;
-        private System.Windows.Forms.Button btnCalcularEstandar;
-        private System.Windows.Forms.Button btnCalcularTpica;
-        private System.Windows.Forms.DataGridView grdEstadistica;
-        private System.Windows.Forms.DataGridViewTextBoxColumn x1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn f1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn xixfi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn x2ixfi;
-        private System.Windows.Forms.Label lbltotalf1;
-        private System.Windows.Forms.Label lbltotalxixfi;
-        private System.Windows.Forms.Label lbltotalx2ixfi;
-        private System.Windows.Forms.Label lbltotales;
-        private System.Windows.Forms.Label lblmedia;
-        private System.Windows.Forms.Label lblestandar;
-        private System.Windows.Forms.Label lbltipica;
+        private System.Windows.Forms.GroupBox grbDatosClientes;
+        private System.Windows.Forms.GroupBox grbNavegacion;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtdui;
+        private System.Windows.Forms.Label lbldui;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label lbltelefono;
+        private System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.Label lbldireccion;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.Label lblnombre;
+        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.Label lblcodigo;
+        private System.Windows.Forms.TextBox txtnit;
+        private System.Windows.Forms.Label lblnit;
+        private System.Windows.Forms.GroupBox grbEdicion;
+        private System.Windows.Forms.Button btnultimo;
+        private System.Windows.Forms.Button btnsiguiente;
+        private System.Windows.Forms.Button btnanterior;
+        private System.Windows.Forms.Button btnprimero;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Label lblidCliente;
+        private System.Windows.Forms.Label lblnregistros;
     }
 }
 
